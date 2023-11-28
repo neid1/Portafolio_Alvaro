@@ -23,3 +23,16 @@ navLink.forEach((link) =>
     ul.classList.remove("show");
   })
 );
+function emailSend(){
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "neidoll75@gmail.com",
+    Password : "FF4E2CDC70D342AA8906A429CC96468A2B77",
+    To : 'neidoll75@gmail.com',
+    From : "neidoll75@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+}
